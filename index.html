@@ -9,7 +9,55 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <style></style>
+    <style>
+      body {
+        background: #feeaab;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        color: #000000;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .content {
+        text-align: center;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 45px;
+      }
+
+      #count {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      #cookie {
+        width: 227px;
+        height: 228px;
+        background: url(cookie.png);
+        border: 0;
+        cursor: pointer;
+        margin: 95px 0 0;
+      }
+    </style>
   </head>
-  <body>Hello World</body>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="title">Cookie Clicker</div>
+        <div id="count">0 cookies</div>
+        <button id="cookie"></button>
+      </div>
+    </div>
+  </body>
 </html>
