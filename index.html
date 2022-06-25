@@ -50,6 +50,24 @@
         cursor: pointer;
         margin: 95px 0 0;
       }
+
+      @keyframes cookieAnimation {
+        from {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.05);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+
+      #cookie.animation {
+        animation: cookieAnimation 0.3s;
+      }
     </style>
   </head>
   <body>
@@ -67,6 +85,11 @@
       let countElement = document.querySelector("#count");
 
       cookieElement.onclick = function () {
+        cookieElement.classList.remove("animation");
+        window.requestAnimationFrame(function () {
+          cookieElement.classList.add("animation");
+        });
+
         count = count + 1;
         countElement.textContent = `${count} cookies`;
       };
